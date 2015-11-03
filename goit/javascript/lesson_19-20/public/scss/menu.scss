@@ -1,0 +1,40 @@
+@import "variables";
+
+.menu {
+    .menu__ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu__li {
+        padding: 0;
+        float: left;
+        display: block;
+        height: $menuBarHeight;
+        line-height: $menuBarHeight;
+        width: 115px;
+        text-align: center;
+    }
+
+    .menu__li_active {
+        background-color: #248cec;
+        cursor: pointer;
+    }
+
+    .menu__a {
+        color: #fff;
+
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .menu__a:hover {
+        color: #f4b60d;
+    }
+
+    &.menu_left {
+        float: left;
+    }
+}

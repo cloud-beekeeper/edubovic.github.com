@@ -1,0 +1,54 @@
+@import "variables";
+
+.slider {
+
+    .flexslider {
+        margin: 0;
+        background: none;
+        border: none;
+        position: relative;
+        zoom: 1;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .slider__img {
+        width: $bodyWidth;
+        height: 470px;
+    }
+
+    .flex-control-nav {
+        bottom: 9px;
+    }
+
+    .flex-control-nav li {
+        margin-right: 15px;
+        background-color: #fff;
+        padding: 3px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        a {
+            height: 9px;
+            width: 9px;
+            box-shadow: none;
+            border-radius: 0;
+            background-color: transparent;
+
+            &.flex-active {
+                background: rgba(0, 0, 0, 0.9) none repeat scroll 0 0;
+                border-radius: 0;
+            }
+        }
+    }
+
+
+
+}

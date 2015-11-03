@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 19-20</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/flexslider.css">
+    <link rel="stylesheet" href="./build/css/all.css">
+    <script src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.3.0/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/jquery.flexslider-min.js"></script>
+    <script src="./js/accordion.js"></script>
+    <script src="./js/slider.js"></script>
+</head>
+    <body>
+        <div class="body">
+            <header class="header">
+                <div class="center">
+                    <div class="clearfix">
+                        <div class="logo">
+                            <a class="logo__a" href="#" title="logo"></a>
+                        </div>
+
+                        <div class="social">
+                            <a class="social__facebook" href="#" title="facebook"></a>
+                            <a class="social__twitter" href="#" title="twitter"></a>
+                            <a class="social__rss" href="#" title="rss"></a>
+                            <a class="social__linkedin" href="#" title="linkedin"></a>
+                            <a class="social__skype" href="#" title="skype"></a>
+
+                        </div>
+                    </div>
+                    <div class="menu-bar clearfix">
+                        <nav class="menu menu_left">
+                            <ul class="menu__ul clearfix">
+                                <li class="menu__li menu__li_active"><a class="menu__a" href="#" title="Home">Home</a></li>
+                                <li class="menu__li"><a class="menu__a" href="#" title="Features">Features</a></li>
+                                <li class="menu__li"><a class="menu__a" href="#" title="Services">Services</a></li>
+                                <li class="menu__li"><a class="menu__a" href="#" title="News">News</a></li>
+                                <li class="menu__li"><a class="menu__a" href="#" title="Shop">Shop</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="search search_right">
+                            <form class="search__form" action="">
+                                <input type="text" class="search__q">
+                                <button class="search__submit" type="submit"></button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+
+            <div class="slider center">
+                <div class="flexslider">
+                    <ul class="slider__ul slides">
+                        <li class="slider__li">
+                            <img class="slider__img" src="./img/slider/1.png">
+                        </li>
+                        <li class="slider__li">
+                            <img class="slider__img" src="./img/slider/2.png">
+                        </li>
+                        <li class="slider__li">
+                            <img class="slider__img" src="./img/slider/1.png">
+                        </li>
+                        <li class="slider__li">
+                            <img class="slider__img" src="./img/slider/2.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="bg">
+               <div class="service center">
+                   <p class="service__title">Our Services</p>
+                   <ul class="clearfix">
+                       <li class="service__item">
+                           <a class="service__a" href="#" title="Schedule Services"><span></span><img class="service__img" src="./img/services/1.png" alt="Schedule Services">Schedule Services</a>
+                       </li>
+
+                       <li class="service__item">
+                           <a class="service__a" href="#" title="Preventive Maintence"><span></span><img class="service__img" src="./img/services/2.png" alt="Preventive Maintence">Preventive Maintence</a>
+                       </li>
+
+                       <li class="service__item">
+                           <a class="service__a" href="#" title="Tire & Wheel Services"><span></span><img class="service__img" src="./img/services/3.png" alt="Tire & Wheel Services">Tire & Wheel Services</a>
+                       </li>
+
+                       <li class="service__item">
+                           <a class="service__a" href="#" title="Repair Services"><span></span><img class="service__img" src="./img/services/4.png" alt="Repair Services">Repair Services</a>
+                       </li>
+                   </ul>
+               </div>
+            </div>
+
+            <div class="bg-2">
+                <div class="center clearfix">
+                    <div class="latest-news clearfix">
+                        <div class="latest-news__title">Latest News</div>
+
+                        <div class="latest-news__item clearfix">
+                            <div class="latest-news__image-body">
+                                <img src="./img/news/mede.png" alt="Advanced Machinery Helps Improve Quality">
+                                <span class="latest-news__month">Jan</span>
+                                <span class="latest-news__day">23</span>
+                            </div>
+                            <div class="latest-news__body">
+                                <a class="latest-news__link-title" href="#" title="Advanced Machinery Helps Improve Quality"><h3>Advanced Machinery Helps Improve Quality</h3></a>
+                                by <a class="latest-news__link-author" href="#">cmsmasters</a> Comments (<a class="latest-news__link-comment" href="#">6</a>)
+
+                                <p class="latest-news__content">Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="banners-place">
+                        <div class="banners-place__title">Banners Place</div>
+                        <div class="accordion">
+
+                            <div class="accordion__item">
+                                <a class="accordion__title" href="#accordion-1"><span>Accordion Panel 1</span></a>
+                                <div id="accordion-1" class="accordion__content">
+                                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur
+                                        samomo enim ipsam voluptatem.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <a class="accordion__title" href="#accordion-2"><span>Accordion Panel 2</span></a>
+                                <div id="accordion-2" class="accordion__content">
+                                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur
+                                        samomo enim ipsam voluptatem.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <a class="accordion__title" href="#accordion-3"><span>Accordion Panel 3</span></a>
+                                <div id="accordion-3" class="accordion__content">
+                                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur
+                                        samomo enim ipsam voluptatem.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <a class="accordion__title" href="#accordion-4"><span>Accordion Panel 4</span></a>
+                                <div id="accordion-4" class="accordion__content">
+                                    <p>Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur
+                                        samomo enim ipsam voluptatem.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="brand clearfix center">
+                <a class="brand__a" href="#" title=""><img class="brand__img" src="./img/brand/1.png" alt=""></a>
+                <a class="brand__a" href="#" title=""><img class="brand__img" src="./img/brand/2.png" alt=""></a>
+                <a class="brand__a" href="#" title=""><img class="brand__img" src="./img/brand/3.png" alt=""></a>
+                <a class="brand__a" href="#" title=""><img class="brand__img" src="./img/brand/4.png" alt=""></a>
+                <a class="brand__a" href="#" title=""><img class="brand__img" src="./img/brand/5.png" alt=""></a>
+                <a class="brand__a" href="#" title=""><img class="brand__img" src="./img/brand/6.png" alt=""></a>
+            </div>
+
+            <footer class="footer">
+                <div >
+                    <div class="footer-menu center clearfix">
+                        <div class="footer-menu__col">
+                            <p class="footer-menu__title">Socials</p>
+                            <ul class="footer-menu__ul">
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Facebook">Facebook</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Flickr">Flickr</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Twitter">Twitter</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Vimeo">Vimeo</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu__col">
+                            <p class="footer-menu__title">Links</p>
+                            <ul class="footer-menu__ul">
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Blogs Blog">Blogs Blog</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Roll Up Roll Up">Roll Up Roll Up</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Blog Free">Blog Free</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Wordpress Blog">Wordpress Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu__col">
+                            <p class="footer-menu__title">BlogRoll</p>
+                            <ul class="footer-menu__ul">
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Blogs Blog">Blogs Blog</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Roll Up Roll Up">Roll Up Roll Up</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Blog Free">Blog Free</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Wordpress Blog">Wordpress Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu__col">
+                            <p class="footer-menu__title">About us</p>
+                            <ul class="footer-menu__ul">
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Agriculture">Agriculture</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Harvest">Harvest</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Company news">Company news</a></li>
+                                <li class="footer-menu__li"><a class="footer-menu__a" href="#" title="Investor relations">Investor relations</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <div class="center clearfix">
+                        <div class="f-contact">
+                            <p class="f-contact__item f-contact__item_location">BuildHomeLtd.  Street Name 123   23 45 Cityname</p>
+                            <p class="f-contact__item f-contact__item_phone">+123 900 123 456</p>
+                            <p class="f-contact__item f-contact__item_email">info@buildhome.web</p>
+                        </div>
+                        <p class="footer-contact__copy">&copy; 2014 Build Home</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

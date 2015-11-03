@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 23-24</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script data-main="js/app" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.22/require.min.js"></script>
+</head>
+<body>
+    <div class="w-list">
+        <h1>todos</h1>
+        <div class="pure-g w-btn">
+            <div class="pure-u-1">
+                <form class="pure-form">
+                    <input class="i-title new-task" type="text" placeholder="Requires an title" autofocus>
+                </form>
+            </div>
+            <div class="pure-u-1-2 w-btn__left">
+                <button class="pure-button pure-button-primary pure-button_red remove-all-tasks">Remove all</button>
+            </div>
+            <div class="pure-u-1-2 w-btn__right">
+                <button class="pure-button pure-button-primary submit-task">Create</button>
+            </div>
+
+        </div>
+        <table class="pure-table pure-table-bordered t-list">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody class="list-tasks"></tbody>
+        </table>
+    </div>
+</body>
+</html>

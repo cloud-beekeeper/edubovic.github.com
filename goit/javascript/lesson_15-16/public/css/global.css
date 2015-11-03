@@ -1,0 +1,14 @@
+
+
+.q-form {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.q-form__input {
+    width: 500px;
+}
+
+.q-form__btn {
+    margin-top: 25px;
+}

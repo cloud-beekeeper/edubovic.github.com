@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 10-11</title>
+    <link rel="stylesheet" href="./css/carousel/carousel.css">
+    <script src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/3.10.1/lodash.min.js"></script>
+    <script src="./js/lib/jquery.carousel.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+
+    <div class="carousel clearfix">
+        <div class="carousel-arrow-left"><span>Влево</span></div>
+        <div class="carousel-hider">
+            <ul class="carousel-list">
+                <li class="carousel-element"><img src="./img/carousel/img1.jpg"><p>Описание 1</p></li>
+                <li class="carousel-element"><img src="./img/carousel/img2.jpg"><p>Описание 2</p></li>
+                <li class="carousel-element"><img src="./img/carousel/img3.jpg"><p>Описание 3</p></li>
+                <li class="carousel-element"><img src="./img/carousel/img4.jpg"><p>Описание 4</p></li>
+                <li class="carousel-element"><img src="./img/carousel/img5.jpg"><p>Описание 5</p></li>
+                <li class="carousel-element"><img src="./img/carousel/img6.jpg"><p>Описание 6</p></li>
+            </ul>
+        </div>
+        <div class="carousel-arrow-right"><span>Вправо</span></div>
+    </div>
+
+    <div id="profile"></div>
+
+    <script type="text/x-tmpl" id="tProfile">
+        <div class="page">
+            <div class="page__item page__item_one">
+                <h1 class="h1"><%= fullName %></h1>
+                <img class="img-i" src="<%= image %>" alt="<%= name %>" title="<%= name %>">
+                <p class="p p_one">Студент заборостроительного университета</p>
+            </div>
+
+            <div class="page__item page__item_two">
+                <p class="p p_two">Хочу учить фронтенд, потому что:</p>
+                <ul class="list">
+                    <li class="list__item">Заборы строить не интересно</li>
+                    <li class="list__item">Платят мало</li>
+                    <li class="list__item">Приходится работать по ночам</li>
+                </ul>
+            </div>
+
+            <div class="page__item page__item_three">
+                <p class="p p_three"><span class="d-block">Мой контактный телефон</span><%= phone %></p>
+
+                <p class="p"><span class="d-block">Мой профиль вконтакте</span><a href="<%= phone %>" title="<%= name %> in VK">vk.com</a></p>
+            </div>
+
+            <p class="p"><span class="d-block">Мой фидбек:</span>Если нужно, могу построить вам забор</p>
+        </div>
+    </script>
+</body>
+</html>

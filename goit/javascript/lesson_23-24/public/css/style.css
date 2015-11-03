@@ -1,0 +1,56 @@
+.w-list {
+    margin: 0 auto;
+}
+
+.w-list, .t-list {
+    width: 300px;
+}
+
+.t-list__td {
+    position: relative;
+}
+
+.t-list__ico {
+    position: absolute;
+    cursor: pointer;
+}
+
+.t-list__ico_remove {
+    right: 1em;
+    top: .5em;
+}
+
+.t-list__ico_edit {
+    right: 2.5em;
+    top: .5em;
+}
+
+.t-list__ico_edit:hover {
+    color: green;
+}
+
+.t-list__ico_remove:hover {
+    color: red;
+}
+
+
+
+.w-btn {
+    margin-bottom: 10px;
+}
+.w-btn__left {
+    text-align: left;
+}
+
+.w-btn__right {
+    text-align: right;
+}
+
+.pure-button.pure-button_red {
+    background: rgb(202, 60, 60);
+}
+
+.i-title {
+    width: 100%;
+    margin-bottom: 10px;
+}
