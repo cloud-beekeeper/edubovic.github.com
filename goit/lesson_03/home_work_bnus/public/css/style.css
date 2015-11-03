@@ -1,0 +1,84 @@
+html, .body, .box {
+    height: 100%;
+}
+
+.box {
+    margin: 0 auto;
+    width: 817px;
+}
+
+.body {
+    background: #000 url("../img/bg_body.png") no-repeat scroll 50% 0;
+    color: #e6e6e6;
+}
+
+.header {
+    height: 150px;
+    margin-top: 60px;
+}
+
+.logo {
+    background: rgba(0, 0, 0, 0) url("../img/palm_tree.png") no-repeat scroll 141px -3px;
+    float: left;
+    height: 75px;
+    padding-top: 72px;
+    width: 263px;
+}
+
+.logo__a {
+    background: rgba(0, 0, 0, 0) url("../img/logo.png") no-repeat scroll 0 0;
+    color: #e6e6e6;
+    display: block;
+    font-size: 10px;
+    padding: 40px 0 0;
+    text-align: center;
+    text-decoration: none;
+    width: 263px;
+}
+
+.contact {
+    float: right;
+    margin: 88px 23px 0 0;
+}
+
+.contact__title {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.contact__des {
+    font-size: 8px;
+    line-height: 2;
+}
+
+.gallery__item {
+    float: left;
+    margin: 0 0 65px;
+    text-align: center;
+
+}
+
+.gallery__border {
+    background: rgba(0, 0, 0, 0) url("../img/border.png") no-repeat scroll 0 0;
+    height: 183px;
+    padding: 5px 0 0 5px;
+    width: 265px;
+}
+
+.gallery__img {
+    display: block;
+    height: 178px;
+    width: 260px;
+}
+
+.footer {
+    clear: both;
+    margin-top: -40px
+}
+
+.copyright {
+    font-family: "Tahoma Regular";
+    font-size: 10px;
+    text-align: center;
+    height: 40px
+}

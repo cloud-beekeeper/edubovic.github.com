@@ -1,0 +1,122 @@
+.body {
+    background-color: #f9f9f9;
+    font-family: "Myriad Pro Regular";
+}
+
+.box {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 50px;
+    width: 960px;
+    -webkit-box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.3);
+}
+
+.logo {
+    display: inline-block;
+    margin: 0 0 35px;
+}
+
+.menu {
+    background-image: -moz-linear-gradient( 90deg, rgb(68,67,67) 0%, rgb(94,94,94) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(68,67,67) 0%, rgb(94,94,94) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(68,67,67) 0%, rgb(94,94,94) 100%);
+    font-size: 0;
+    height: 40px;
+}
+
+.menu__item {
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: unset;
+    width: 101px;
+}
+
+.menu__item:hover, .menu__item_active {
+    background-image: url("../img/menu_hover.png");
+}
+
+.content {
+    padding: 40px 0;
+}
+
+.left-content {
+    float: left;
+    width: 240px;
+}
+
+.right-content {
+    margin-left: 288px;
+}
+
+.left-menu {
+    border: 1px solid #c8c8c8;
+}
+
+.left-menu__a {
+    border-bottom: 1px solid #c8c8c8;
+    color: #656363;
+    display: block;
+    font-size: 13.33px;
+    padding: 15px 20px 10px;
+    text-decoration: none;
+}
+
+.left-menu__a:hover {
+    background-color: #f9f9f9;
+    padding-left: 25px;
+}
+
+
+.left-menu__a:last-child {
+    border: medium none;
+}
+
+
+.product__img {
+    border: 1px solid #c8c8c8;
+    margin-bottom: 40px;
+    padding: 50px 0;
+}
+
+.product-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: #e1e1e1;
+    font-size: 13.33px;
+    height: 40px;
+    padding: 0 25px;
+}
+
+.menu.menu_footer {
+    background-image: none;
+}
+
+.menu.menu_footer .menu__item {
+    color: #2c2c2c;
+    text-align: left;
+    font-size: 13.33px;
+}
+
+.menu.menu_footer .menu__item:hover, .menu.menu_footer .menu__item_active {
+    background-image: none;
+    text-decoration: underline;
+}
+
+.left-footer {
+    float: left;
+}
+
+.right-footer {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+}
