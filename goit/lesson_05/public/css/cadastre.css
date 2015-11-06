@@ -1,0 +1,135 @@
+html, .body, .box {
+    height: 100%;
+}
+
+.body {
+    font-family: tahoma;
+}
+
+.center {
+    width: 1215px;
+    margin: 0 auto;
+}
+
+.box {
+    background: transparent url("../img/bg_box.png") no-repeat scroll 50% 0;
+    position: relative;
+}
+
+.header {
+    background: transparent url("../img/bg_blue.png") repeat-x scroll 0 0;
+    line-height: 36px;
+}
+
+.menu {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__item {
+    display: inline-block;
+}
+
+.menu__a {
+    color: #60b5ed;
+    display: block;
+    font-family: tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu__a:hover {
+    background-color: #4eabda;
+    color: #fff;
+}
+
+.bg-opacity {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    left: 50%;
+    margin: -280px 0 0 -280px;
+    position: absolute;
+    top: 50%;
+    width: 560px;
+}
+
+.h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 62px;
+    margin: 0 0 2px;
+    text-align: center;
+}
+
+
+.form {
+    padding: 36px 0 20;
+}
+
+.form__input {
+    background-color: #000;
+    border-top: medium none;
+    border-left: medium none;
+    border-right: medium none;
+    border-left: medium none;
+    border-bottom: 1px solid #484948;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    line-height: 36px;
+    margin: 0 auto 10px;
+    padding: 0 20px;
+    width: 236px;
+}
+
+.form__input:focus {
+    background: transparent url("../img/bg_input.png") repeat-x scroll 0 0;
+    border-bottom: medium none;
+    line-height: 52px;
+    width: 253px;
+}
+
+.form__button {
+    background: transparent url("../img/bg_button.png") repeat-x scroll 0 0;
+    border: medium none;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 41px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 151px;
+}
+
+.send_checkbox {
+    color: #ccc;
+    display: block;
+    margin: 0 auto;
+    width: 276px;
+}
+
+.form__checkbox {
+    margin-right: 5px;
+}
+
+.footer {
+    padding-bottom: 20px;
+}
+
+.footer__p {
+    color: #ccc;
+    display: block;
+    font-size: 11px;
+    margin: 0 auto;
+    text-align: center;
+    width: 400px;
+}

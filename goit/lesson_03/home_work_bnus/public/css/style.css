@@ -10,6 +10,8 @@ html, .body, .box {
 .body {
     background: #000 url("../img/bg_body.png") no-repeat scroll 50% 0;
     color: #e6e6e6;
+    font-family: tahoma;
+    font-size: 10px;
 }
 
 .header {
@@ -29,7 +31,7 @@ html, .body, .box {
     background: rgba(0, 0, 0, 0) url("../img/logo.png") no-repeat scroll 0 0;
     color: #e6e6e6;
     display: block;
-    font-size: 10px;
+    font-weight: bold;
     padding: 40px 0 0;
     text-align: center;
     text-decoration: none;
@@ -53,9 +55,9 @@ html, .body, .box {
 
 .gallery__item {
     float: left;
+    font-size: 15px;
     margin: 0 0 65px;
     text-align: center;
-
 }
 
 .gallery__border {
@@ -77,8 +79,12 @@ html, .body, .box {
 }
 
 .copyright {
-    font-family: "Tahoma Regular";
-    font-size: 10px;
     text-align: center;
     height: 40px
+}
+
+.clearfix:after {
+    content:'';
+    clear: both;
+    display: block;
 }

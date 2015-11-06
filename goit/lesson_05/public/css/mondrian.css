@@ -1,0 +1,42 @@
+
+.m-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.m-tr {
+    height: 50px;
+}
+
+.m-td {
+    height: 50px;
+    width: 50px;
+}
+
+.m-td {
+    border: 10px solid #0d0d0d;
+}
+
+.white {
+    background-color: white;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.black {
+    background-color: black;
+}
+
+.bg {
+    background-color: #0d0d0d;
+}
