@@ -88,3 +88,7 @@ html, .body, .box {
     clear: both;
     display: block;
 }
+
+.d-block {
+    display: block;
+}

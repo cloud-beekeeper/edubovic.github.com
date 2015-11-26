@@ -1,9 +1,21 @@
+@font-face {
+    font-family: 'helveticaneuecyrlight';
+    src: url('../fonts/helveticaneuecyr-light-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneuecyr-light-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneuecyr-light-webfont.woff') format('woff'),
+         url('../fonts/helveticaneuecyr-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html, .body, .box {
     height: 100%;
 }
 
 .body {
-    font-family: tahoma;
+    font-family: helveticaneuecyrlight;
 }
 
 .center {
@@ -12,7 +24,7 @@ html, .body, .box {
 }
 
 .box {
-    background: transparent url("../img/bg_box.png") no-repeat scroll 50% 0;
+    background: transparent url("../img/bg_box.png") no-repeat scroll 50% 36px;
     position: relative;
 }
 
@@ -21,23 +33,27 @@ html, .body, .box {
     line-height: 36px;
 }
 
-.menu {
+.ul {
     list-style: outside none none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-.menu__item {
-    display: inline-block;
+.menu {
+    float: right;
+}
+
+.menu__li {
+    float: left;
 }
 
 .menu__a {
     color: #60b5ed;
     display: block;
-    font-family: tahoma;
+    font-family: helveticaneuecyrlight;
     font-size: 14px;
     font-weight: bold;
-    padding: 0 10px;
+    padding: 0 20px;
     text-align: center;
     text-decoration: none;
 }
@@ -45,6 +61,41 @@ html, .body, .box {
 .menu__a:hover {
     background-color: #4eabda;
     color: #fff;
+}
+
+.border-menu-right {
+    border-left: 1px solid #56a2dc;
+    float: right;
+    height: 36px;
+    text-align: right;
+    width: 370px;
+}
+
+.menu-right {
+    display: inline-block;
+}
+
+.menu-right__li {
+    float: left;
+}
+
+.menu__flag {
+    background: transparent url("../img/flag.png") no-repeat scroll 0 50%;
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.menu-right__a {
+    color: #fff;
+    display: block;
+    font-family: helveticaneuecyrlight;
+    font-size: 14px;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.menu-right__a:hover {
+    background: linear-gradient(to bottom, rgba(66,153,210,1) 0%, rgba(101,168,228,1) 100%);
 }
 
 .bg-opacity {
@@ -70,30 +121,25 @@ html, .body, .box {
 
 
 .form {
-    padding: 36px 0 20;
+
 }
 
 .form__input {
-    background-color: #000;
-    border-top: medium none;
-    border-left: medium none;
-    border-right: medium none;
-    border-left: medium none;
-    border-bottom: 1px solid #484948;
+    box-shadow: 0px 1px 0px 0px rgba(75,75,75,1), 0px 0px 9px 5px rgba(47,122,197,0.7), inset 0px 0px 0px 2px rgba(0,0,0,0.1), inset 2px 2px 20px 5px rgba(0,0,0,0.2);
+    background-color: rgba(17,17,17,1);
+    background: linear-gradient(left, rgba(17,17,17,1) 0%, rgba(14,13,13,1) 100%);
+    border: medium none;
     color: #fff;
     display: block;
     font-size: 14px;
     line-height: 36px;
-    margin: 0 auto 10px;
+    margin: 0 auto 20px;
     padding: 0 20px;
     width: 236px;
 }
 
 .form__input:focus {
-    background: transparent url("../img/bg_input.png") repeat-x scroll 0 0;
-    border-bottom: medium none;
-    line-height: 52px;
-    width: 253px;
+    background-color: #1b5288;
 }
 
 .form__button {
@@ -104,7 +150,7 @@ html, .body, .box {
     font-size: 14px;
     font-weight: normal;
     line-height: 41px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 0;
     text-align: center;
     width: 151px;
@@ -132,4 +178,35 @@ html, .body, .box {
     margin: 0 auto;
     text-align: center;
     width: 400px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.fb {
+    padding-top: 35px;
+}
+
+.fb_a {
+    background: transparent url("../img/fb.png") no-repeat scroll 0 0;
+    display: block;
+    height: 35px;
+    width: 276px;
+    margin: 0 auto;
+}
+
+.ou {
+    background: transparent url("../img/ou.png") no-repeat scroll 50% 50%;
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 28px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.clearfix:after {
+    content:'';
+    clear: both;
+    display: block;
 }

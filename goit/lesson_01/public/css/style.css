@@ -27,6 +27,10 @@
     padding-top: 23px;
 }
 
+.p_three {
+    margin-bottom: 37px;
+}
+
 .page__item {
     border-bottom: 1px solid black;
 }
@@ -66,4 +70,8 @@
 
 .list__item {
     line-height: 25px;
+}
+
+.d-block {
+    display: block;
 }

@@ -22,22 +22,33 @@
     background-image: -moz-linear-gradient( 90deg, rgb(68,67,67) 0%, rgb(94,94,94) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(68,67,67) 0%, rgb(94,94,94) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(68,67,67) 0%, rgb(94,94,94) 100%);
-    font-size: 0;
-    height: 40px;
 }
 
-.menu__item {
+.menu__ul {
+    padding: 0;
+    margin: 0;
+}
+
+.menu__ul_left .menu__li {
+    float: none;
+}
+
+.menu__li {
+    float: left;
+    list-style: outside none none;
+}
+
+.menu__a {
     color: #fff;
     display: inline-block;
     font-size: 15px;
-    height: 40px;
     line-height: 40px;
     text-align: center;
     text-decoration: unset;
     width: 101px;
 }
 
-.menu__item:hover, .menu__item_active {
+.menu__a:hover, .menu__a_active {
     background-image: url("../img/menu_hover.png");
 }
 
@@ -73,11 +84,9 @@
     padding-left: 25px;
 }
 
-
 .left-menu__a:last-child {
     border: medium none;
 }
-
 
 .product__img {
     border: 1px solid #c8c8c8;
@@ -100,13 +109,13 @@
     background-image: none;
 }
 
-.menu.menu_footer .menu__item {
+.menu.menu_footer .menu__a {
     color: #2c2c2c;
     text-align: left;
     font-size: 13px;
 }
 
-.menu.menu_footer .menu__item:hover, .menu.menu_footer .menu__item_active {
+.menu.menu_footer .menu__a:hover, .menu.menu_footer .menu__a_active {
     background-image: none;
     text-decoration: underline;
 }
