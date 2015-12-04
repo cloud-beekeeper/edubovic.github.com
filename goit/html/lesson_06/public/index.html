@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson - 6</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="clearfix">
+                <div class="header__phone">(044)123-45-67 &nbsp; (044)567-89-10</div>
+
+                <div class="block-home">
+                    <a class="block-home__item block-home__item_home" href="#" title="home"></a>
+                    <a class="block-home__item block-home__item_tree" href="#" title="tree"></a>
+                    <a class="block-home__item block-home__item_mail" href="#" title="mail"></a>
+                </div>
+
+                <form class="login" action="">
+                    <div class="recovery">
+                        <a class="login__link login__link_reset-password" href="#" title="восстановление пароля">забыли пароль?</a>
+                    </div>
+                    <div class="login__input">
+                        <input class="login__item" type="text" name="login" value="" placeholder="логин">
+                        <input class="login__item login__item_right" type="text" name="password" value="" placeholder="пароль">
+                    </div>
+                    <div class="login__btn-login">
+                        <a class="login__link login__link_left" href="#" title="вход в систему">вход</a>|<a class="login__link login__link_right" href="#" title="регистрация нового пользователя">регистрация</a>
+                    </div>
+                </form>
+            </div>
+            <img class="header__img-zazor" src="img/zazor.png" alt="zazor">
+
+        </header>
+        <div class="panel-menu clearfix">
+            <nav class="menu-nav">
+                <ul class="menu menu_top clearfix">
+                    <li class="menu__li"><a class="menu__a" href="#" title="О компании">О компании</a></li>
+                    <li class="menu__li"><a class="menu__a" href="#" title="Оплата">Оплата</a></li>
+                    <li class="menu__li"><a class="menu__a" href="#" title="Доставка">Доставка</a></li>
+                    <li class="menu__li"><a class="menu__a" href="#" title="Статьи">Статьи</a></li>
+                    <li class="menu__li"><a class="menu__a" href="#" title="Контакты">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="info-basket">
+                <div class="info-basket__item info-basket__item_basket">товаров:<span class="info-basket__blue">0</span></div>
+                <div class="info-basket__item">на сумму:<span class="info-basket__blue">0,00 грн.</span></div>
+            </div>
+        </div>
+
+        <div class="filter">
+
+        </div>
+
+        <div class="content clearfix">
+            <aside class="aside-left">
+                <div class="title">Каталог продукции:</div>
+                <header class="header-menu">
+                    <p class="header-menu__title">Шины</p>
+                    <nav class="header-menu__nav">
+                        <ul class="header-menu__ul">
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 1">Наименование 1</a></li>
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 2">Наименование 2</a></li>
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 3">Наименование 3</a></li>
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 4">Наименование 4</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <header class="header-menu">
+                    <p class="header-menu__title">Диски</p>
+                    <nav class="header-menu__nav">
+                        <ul class="header-menu__ul">
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 1">Наименование 1</a></li>
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 2">Наименование 2</a></li>
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 3">Наименование 3</a></li>
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 4">Наименование 4</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <header class="header-menu">
+                    <p class="header-menu__title">Болты</p>
+                    <nav class="header-menu__nav">
+                        <ul class="header-menu__ul">
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 1">Наименование 1</a></li>
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 2">Наименование 2</a></li>
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 3">Наименование 3</a></li>
+                            <li class="header-menu__li"><a class="header-menu__a" href="#" title="Наименование 4">Наименование 4</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </aside>
+
+            <main class="main">
+                <article>
+                    <figure class="product">
+                        <figcaption class="product__title">
+                            <a class="product__link" href="#" title="Goodyear"><span class="product__link_blue">Goodyear</span>Ultra Grip Extreme</a>
+                        </figcaption>
+                        <div class="product__bg-img">
+                            <img class="product__img" src="img/product.png" alt="Goodyear Ultra Grip Extreme" title="Goodyear Ultra Grip Extreme">
+                        </div>
+                        <div class="product__price">90.00 грн.</div>
+                    </figure>
+                    <figure class="product">
+                        <figcaption class="product__title">
+                            <a class="product__link" href="#" title="Nokian"><span class="product__link_blue">Nokian</span>Hakkapeliitta R</a>
+                        </figcaption>
+                        <div class="product__bg-img">
+                            <img class="product__img" src="img/product.png" alt="Nokian Hakkapeliitta R" title="Nokian Hakkapeliitta R">
+                        </div>
+                        <div class="product__price">115.00 грн.</div>
+                    </figure>
+                    <figure class="product product_last">
+                        <figcaption class="product__title">
+                            <a class="product__link" href="#" title="Hankook"><span class="product__link_blue">Hankook</span>K 708 155/65 R14</a>
+                        </figcaption>
+                        <div class="product__bg-img">
+                            <img class="product__img" src="img/product.png" alt="Hankook K 708 155/65 R14" title="Hankook K 708 155/65 R14">
+                        </div>
+                        <div class="product__price">393.00 грн.</div>
+                    </figure>
+                    <figure class="product">
+                        <figcaption class="product__title">
+                            <a class="product__link" href="#" title="Goodyear"><span class="product__link_blue">Goodyear</span>Ultra Grip Extreme</a>
+                        </figcaption>
+                        <div class="product__bg-img">
+                            <img class="product__img" src="img/product.png" alt="Goodyear Ultra Grip Extreme" title="Goodyear Ultra Grip Extreme">
+                        </div>
+                        <div class="product__price">90.00 грн.</div>
+                    </figure>
+                    <figure class="product">
+                        <figcaption class="product__title">
+                            <a class="product__link" href="#" title="Nokian"><span class="product__link_blue">Nokian</span>Hakkapeliitta R</a>
+                        </figcaption>
+                        <div class="product__bg-img">
+                            <img class="product__img" src="img/product.png" alt="Nokian Hakkapeliitta R" title="Nokian Hakkapeliitta R">
+                        </div>
+                        <div class="product__price">115.00 грн.</div>
+                    </figure>
+                    <figure class="product product_last">
+                        <figcaption class="product__title">
+                            <a class="product__link" href="#" title="Hankook"><span class="product__link_blue">Hankook</span>K 708 155/65 R14</a>
+                        </figcaption>
+                        <div class="product__bg-img">
+                            <img class="product__img" src="img/product.png" alt="Hankook K 708 155/65 R14" title="Hankook K 708 155/65 R14">
+                        </div>
+                        <div class="product__price">393.00 грн.</div>
+                    </figure>
+                    <figure class="product">
+                        <figcaption class="product__title">
+                            <a class="product__link" href="#" title="Goodyear"><span class="product__link_blue">Goodyear</span>Ultra Grip Extreme</a>
+                        </figcaption>
+                        <div class="product__bg-img">
+                            <img class="product__img" src="img/product.png" alt="Goodyear Ultra Grip Extreme" title="Goodyear Ultra Grip Extreme">
+                        </div>
+                        <div class="product__price">90.00 грн.</div>
+                    </figure>
+                    <figure class="product">
+                        <figcaption class="product__title">
+                            <a class="product__link" href="#" title="Nokian"><span class="product__link_blue">Nokian</span>Hakkapeliitta R</a>
+                        </figcaption>
+                        <div class="product__bg-img">
+                            <img class="product__img" src="img/product.png" alt="Nokian Hakkapeliitta R" title="Nokian Hakkapeliitta R">
+                        </div>
+                        <div class="product__price">115.00 грн.</div>
+                    </figure>
+                    <figure class="product product_last">
+                        <figcaption class="product__title">
+                            <a class="product__link" href="#" title="Hankook"><span class="product__link_blue">Hankook</span>K 708 155/65 R14</a>
+                        </figcaption>
+                        <div class="product__bg-img">
+                            <img class="product__img" src="img/product.png" alt="Hankook K 708 155/65 R14" title="Hankook K 708 155/65 R14">
+                        </div>
+                        <div class="product__price">393.00 грн.</div>
+                    </figure>
+              </article>
+            </main>
+
+            <aside class="aside-right">
+                <form class="form-brend" action="">
+                    <div class="title">Брен:</div>
+                    <header class="header-menu header-menu_right">
+                        <p class="header-menu__title">Шины</p>
+                        <nav class="header-menu__nav">
+                            <ul class="header-menu__ul">
+                                <li class="header-menu__li"> <label><input class="header-menu__checkbox" type="checkbox" name="name">Бренд 1</label></a></li>
+                                <li class="header-menu__li"> <label><input class="header-menu__checkbox" type="checkbox" name="name">Бренд 2</label></a></li>
+                                <li class="header-menu__li"> <label><input class="header-menu__checkbox" type="checkbox" name="name">Бренд 3</label></a></li>
+                                <li class="header-menu__li"> <label><input class="header-menu__checkbox" type="checkbox" name="name">Бренд 4</label></a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <header class="header-menu header-menu_right">
+                        <p class="header-menu__title">Биски</p>
+                        <nav class="header-menu__nav">
+                            <ul class="header-menu__ul">
+                                <li class="header-menu__li"> <label><input class="header-menu__checkbox" type="checkbox" name="name">Бренд 1</label></a></li>
+                                <li class="header-menu__li"> <label><input class="header-menu__checkbox" type="checkbox" name="name">Бренд 2</label></a></li>
+                                <li class="header-menu__li"> <label><input class="header-menu__checkbox" type="checkbox" name="name">Бренд 3</label></a></li>
+                                <li class="header-menu__li"> <label><input class="header-menu__checkbox" type="checkbox" name="name">Бренд 4</label></a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <input class="form-brend__submit" type="submit" value="Выбрать">
+                </form>
+
+            </aside>
+        </div>
+        <div class="logo-brand">
+            <img class="logo-brand__item" src="./img/08.png" alt="">
+            <img class="logo-brand__item" src="./img/07.png" alt="">
+            <img class="logo-brand__item" src="./img/06.png" alt="">
+            <img class="logo-brand__item" src="./img/05.png" alt="">
+            <img class="logo-brand__item" src="./img/04.png" alt="">
+            <img class="logo-brand__item" src="./img/03.png" alt="">
+            <img class="logo-brand__item" src="./img/02.png" alt="">
+            <img class="logo-brand__item" src="./img/01.png" alt="">
+        </div>
+        <footer class="footer">
+            <nav class="menu-nav menu-nav__footer">
+                <ul class="menu menu_footer clearfix">
+                    <li class="menu__li"><a class="menu__a" href="#" title="О компании">О компании</a></li>
+                    <li class="menu__li"><a class="menu__a" href="#" title="Доставка">Доставка</a></li>
+                    <li class="menu__li"><a class="menu__a" href="#" title="Статьи">Статьи</a></li>
+                    <li class="menu__li"><a class="menu__a" href="#" title="Контакты">Контакты</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">Создание сайта &copy; Global Vision</p>
+        </footer>
+    </div>
+</body>
+</html>
