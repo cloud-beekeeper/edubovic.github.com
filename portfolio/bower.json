@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "0.0.0",
+  "homepage": "http://edubovic.github.io/",
+  "authors": [
+    "Edward Dubovic <edward.dubovic@gmail.com>"
+  ],
+  "description": "My portfolio",
+  "main": "index.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "portfolio"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}

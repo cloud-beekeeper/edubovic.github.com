@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Edward Dubovic <edward.dubovic@gmail.com>",
+  "license": "ISC"
+}
