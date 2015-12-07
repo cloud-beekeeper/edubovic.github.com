@@ -15,6 +15,8 @@ html, .body, .box {
 
 .body {
     font-family: helveticaneuecyrlight;
+    background: transparent url("../img/bg_box.png") no-repeat scroll 0 0;
+    background-size: cover;
 }
 
 .center {
@@ -23,7 +25,7 @@ html, .body, .box {
 }
 
 .box {
-    background: transparent url("../img/bg_box.png") no-repeat scroll 50% 36px;
+
     position: relative;
 }
 
@@ -76,6 +78,14 @@ html, .body, .box {
 
 .menu-right__li {
     float: left;
+    color: #fff;
+    font-family: helveticaneuecyrlight;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.menu-right__li-blue {
+    background: linear-gradient(to bottom, rgba(66,153,210,1) 0%, rgba(101,168,228,1) 100%);
 }
 
 .menu__flag {
@@ -85,16 +95,13 @@ html, .body, .box {
 }
 
 .menu-right__a {
-    color: #fff;
-    display: block;
-    font-family: helveticaneuecyrlight;
     font-size: 14px;
-    padding: 0 15px;
+    color: #fff;
     text-decoration: none;
 }
 
 .menu-right__a:hover {
-    background: linear-gradient(to bottom, rgba(66,153,210,1) 0%, rgba(101,168,228,1) 100%);
+    text-decoration: underline;
 }
 
 .bg-opacity {
@@ -187,12 +194,24 @@ html, .body, .box {
     padding-top: 35px;
 }
 
-.fb_a {
+.fb-login {
     background: transparent url("../img/fb.png") no-repeat scroll 0 0;
-    display: block;
+    margin: 0 auto;
     height: 35px;
     width: 276px;
-    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.fb-login__span {
+    font-weight: normal;
+}
+
+.fb-login:hover {
+    cursor: pointer;
 }
 
 .ou {

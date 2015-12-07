@@ -33,6 +33,10 @@
     float: none;
 }
 
+.menu__ul_left .menu__li {
+    border-bottom: 1px solid #c8c8c8;
+}
+
 .menu__li {
     float: left;
     list-style: outside none none;
@@ -40,12 +44,12 @@
 
 .menu__a {
     color: #fff;
-    display: inline-block;
+    display: block;
     font-size: 15px;
     line-height: 40px;
     text-align: center;
     text-decoration: unset;
-    width: 101px;
+    padding: 0 20px;
 }
 
 .menu__a:hover, .menu__a_active {
@@ -71,7 +75,6 @@
 }
 
 .left-menu__a {
-    border-bottom: 1px solid #c8c8c8;
     color: #656363;
     display: block;
     font-size: 13px;
