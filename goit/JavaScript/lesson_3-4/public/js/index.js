@@ -1,8 +1,8 @@
-var GoMath = (function () {
-    function GoMath() {
+var GoIt = (function () {
+    function GoIt() {
 
     }
-    GoMath.prototype.generateHtml = function (options) {
+    GoIt.prototype.generateHtml = function (options) {
         var h1, wrapper, label, question, input, div, divWrapper, i = 0;
         wrapper = document.createElement('div');
         h1 = document.createElement('h1');
@@ -31,13 +31,13 @@ var GoMath = (function () {
         return wrapper;
     };
 
-    return GoMath;
+    return GoIt;
 })();
 
 
 document.addEventListener('DOMContentLoaded', function () {
     var options, GoApp;
-    GoApp = new GoMath();
+    GoApp = new GoIt();
     options = {
         title: 'Тест по программированию',
         questions: [
