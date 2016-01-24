@@ -31,7 +31,7 @@ var GoMath = (function () {
 document.addEventListener('DOMContentLoaded', function () {
     var GoApp = new GoMath();
 
-    document.getElementById("goApp_pow").onclick = function() {
+    document.getElementById("goApp_pow").onclick = function () {
         var base, exponent;
         base = +prompt('Введите число (base)', '1');
         exponent = +prompt('Введит степень (exponent)', '1');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.info('Результат: ', GoApp.pow(base, exponent));
     };
 
-    document.getElementById("goApp_findUser").onclick = function() {
+    document.getElementById("goApp_findUser").onclick = function () {
         var nameUser, arr = [], COUNTER = 5;
         for (var i = 0; i < COUNTER ; i++) {
             arr.push(prompt('Введит элемент массива', 'default'));

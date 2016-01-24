@@ -1,17 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Lesson 9-10</title>
+    <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/carousel.css">
     <link rel="stylesheet" href="./css/customSelect.css">
+    <link rel="stylesheet" href="./css/jquery.menu.css">
     <script src="./js/lib/jquery.min.js"></script>
     <script src="./js/lib/jquery.jcarousel.min.js"></script>
     <script src="./js/lib/jquery.customSelect.latest.min.js"></script>
     <script src="./js/carousel.js"></script>
     <script src="./js/customSelect.js"></script>
+    <script src="./js/jquery.menu.js"></script>
 </head>
 <body>
+    <nav class="nav-menu">
+        <ul class="nav-menu__ul clearfix">
+            <li class="nav-menu__li"><a class="nav-menu__a" href="#">Nav 1</a></li>
+            <li class="nav-menu__li"><a class="nav-menu__a" href="#">Nav 2</a></li>
+            <li class="nav-menu__li">
+                <a class="nav-menu__a nav-menu__a_dropdown" href="#">Nav 3</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Nav 3.1</a></li>
+                    <li><a href="#">Nav 3.2</a></li>
+                    <li><a href="#">Nav 3.3</a></li>
+                    <li>
+                        <a href="#">Nav 3.4</a>
+                        <!--<ul class="sub-menu">
+                            <li><a href="#">Nav 3.4.1</a></li>
+                            <li class="dropdown"><a href="#">Nav 3.4.2</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Nav 3.4.2.1</a></li>
+                                    <li><a href="#">Nav 3.4.2.2</a></li>
+                                    <li><a href="#">Nav 3.4.2.3</a></li>
+                                    <li><a href="#">Nav 3.4.2.4</a></li>
+                                    <li><a href="#">Nav 3.4.2.5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Nav 3.4.3</a></li>
+                            <li><a href="#">Nav 3.4.4</a></li>
+                            <li><a href="#">Nav 3.4.5</a></li>
+                        </ul>-->
+                    </li>
+                    <li><a href="#">Nav 3.5</a></li>
+                </ul>
+            </li>
+            <li class="nav-menu__li"><a class="nav-menu__a" href="#">Nav 4</a></li>
+            <li class="nav-menu__li"><a class="nav-menu__a" href="#">Nav 5</a></li>
+        </ul>
+    </nav>
+
+    <div class="w50 center">
+        <form action="">
+            <label for="jq-select">Images</label>
+            <div>
+                <select id="jq-select" class="styled">
+                    <option value="./img/carousel/img1.jpg">Image 1</option>
+                    <option value="./img/carousel/img2.jpg">Image 2</option>
+                    <option value="./img/carousel/img3.jpg">Image 3</option>
+                    <option value="./img/carousel/img4.jpg">Image 4</option>
+                    <option value="./img/carousel/img5.jpg">Image 5</option>
+                    <option value="./img/carousel/img6.jpg">Image 6</option>
+                </select>
+            </div>
+        </form>
+    </div>
 
     <div class="carousel-wrapper">
         <div class="carousel">
@@ -29,21 +83,6 @@
 
         <p class="carousel-pagination"></p>
     </div>
-
-
-    <form action="">
-        <label for="jq-select">Custom select</label>
-        <div>
-            <select id="jq-select" class="styled">
-                <option value="">choose preset...</option>
-                <option value="one">two</option>
-                <option value="two">something</option>
-                <option value="three">4</option>
-                <option value="four">5</option>
-            </select>
-        </div>
-    </form>
-
 
 </body>
 </html>

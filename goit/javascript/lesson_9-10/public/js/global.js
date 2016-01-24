@@ -1,0 +1,5 @@
+$(function () {
+
+    $('.nav-menu').menu();
+});
+
