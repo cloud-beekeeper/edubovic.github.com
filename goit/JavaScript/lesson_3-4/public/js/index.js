@@ -1,7 +1,7 @@
 var GoIt = (function () {
     function GoIt() {
-
     }
+
     GoIt.prototype.generateHtml = function (options) {
         var h1, wrapper, label, question, input, div, divWrapper, i = 0;
         wrapper = document.createElement('div');

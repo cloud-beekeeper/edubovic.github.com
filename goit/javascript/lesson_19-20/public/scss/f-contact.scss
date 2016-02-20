@@ -1,0 +1,26 @@
+.f-contact {
+    float: left;
+
+    .f-contact__item {
+        line-height: 16px;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .f-contact__item.f-contact__item_location {
+        background: transparent url("/img/ico/location.png") no-repeat scroll 0 50%;
+        padding-left: 24px;
+        padding-right: 35px;
+    }
+
+    .f-contact__item.f-contact__item_phone {
+        background: transparent url("/img/ico/phone.png") no-repeat scroll 0 50%;
+        padding-left: 20px;
+        padding-right: 40px;
+    }
+
+    .f-contact__item.f-contact__item_email {
+        background: transparent url("/img/ico/email.png") no-repeat scroll 0 50%;
+        padding-left: 26px;
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "lesson_19-20",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://"
+  },
+  "keywords": [],
+  "author": "Edward Dubovic <edward.dubovic@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.2",
+    "gulp-watch": "^4.3.5",
+    "sass-lint": "^1.5.0"
+  }
+}

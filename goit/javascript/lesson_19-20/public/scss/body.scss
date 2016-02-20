@@ -1,0 +1,24 @@
+@import "variables";
+
+.body {
+    padding-top: 37px;
+    background-color: #fff;
+}
+
+
+.center {
+    width: $bodyWidth;
+    margin: 0 auto;
+}
+
+
+.clearfix:after {
+    content:'';
+    clear: both;
+    display: block;
+}
+
+
+.bg-2 {
+    background-color: #f7f7f7;
+}

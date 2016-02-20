@@ -1,0 +1,60 @@
+@import "variables";
+
+$widthItemService: 260px;
+
+.service {
+    padding: 50px 0 70px 0;
+
+    .service__title {
+        font-size: 24px;
+        color: #fff;
+        padding-bottom: 50px;
+        margin: 0;
+    }
+
+    .service__item {
+        float: left;
+        margin: 0;
+        width: $widthItemService;
+        padding-right: ($bodyWidth - ($widthItemService * 4)) / 3;
+
+        .service__a {
+            display: block;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            width: $widthItemService;
+
+            .service__img {
+                display: block;
+                margin-bottom: 35px;
+                height: $widthItemService;
+                width: $widthItemService;
+            }
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgba(36, 140, 236, 0.9) url("/img/ico/plus.png") no-repeat scroll 50% 50%;
+                height: $widthItemService;
+                width: $widthItemService;
+                display: none;
+            }
+
+            &:hover {
+                color: #f4b60d;
+            }
+
+            &:hover span {
+                display: block;
+            }
+        }
+    }
+
+    .service__item:last-child {
+        padding-right: 0;
+    }
+}
