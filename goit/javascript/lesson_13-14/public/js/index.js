@@ -36,7 +36,6 @@ var GoItTest = (function () {
         var livrare = [], t, el = document.forms[0].elements;
         var result = {};
 
-
         for (var i = 0; i < el.length - 1; i++) {
             t = el[i].name.match(/question\[([0-9])\]\[answer([0-9])\]/);
             result[t[1]] = result[t[1]] || [];
@@ -65,8 +64,9 @@ var GoItTest = (function () {
     return GoItTest;
 })();
 
+var test, GoApp;
 document.addEventListener('DOMContentLoaded', function () {
-    var test, GoApp;
+
     test = {
         questions: [
             {

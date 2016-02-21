@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lesson 13-14</title>
+    <title>Lesson 21-22</title>
     <link rel="stylesheet" href="css/modal.css">
     <script src="../../lib/tmpl.js"></script>
-    <script src="build/js/index.js"></script>
+    <script src="js/GoItTest.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
 <div>
@@ -37,11 +38,7 @@
                 <h4 class="m-dialog__title"><%= title %></h4>
             </div>
             <div class="m-dialog__body">
-                <% if (body) { %>
-                Вы сдали!
-                <% } else { %>
-                Вы не сдали!
-                <% } %>
+                <%= body %>
             </div>
             <div class="m-dialog__footer">
                 <button type="button" class="m-dialog__OK">OK</button>

@@ -1,71 +1,30 @@
-var GoItTest = (() => {
-    function GoItTest(test, id) {
-        localStorage.clear();
-        localStorage.setItem('test', JSON.stringify(test));
-        this.test = JSON.parse(localStorage.getItem('test'));
-        document.getElementById(id).innerHTML = tmpl('tQuestion', this.test);
-    }
+var data, GoApp;
 
-    function getAnswer(questionId, questions) {
-        for (var key in questions) {
-            if (questions.hasOwnProperty(key) &&  questions[key].id === +questionId) {
-                return questions[key].trueAnswer;
-            }
-        }
-    }
+function showModal(title, body) {
+    var theDiv = document.createElement('div');
+    theDiv.id = 'modal';
+    theDiv.innerHTML = tmpl('modalDialog', {
+        title: title,
+        body: body
+    });
+    document.body.appendChild(theDiv);
+    document.querySelector('.m-dialog__close').addEventListener('click', function (e) {
+        closeModal(e.target);
+    });
+    document.querySelector('.m-dialog__OK').addEventListener('click', function (e) {
+        closeModal(e.target);
+    });
+}
 
-    GoItTest.prototype.showModal = function (body) {
-        var theDiv = document.createElement('div');
-        theDiv.id = 'modal';
-        theDiv.innerHTML = tmpl('modalDialog', {
-            title: 'Result',
-            body: body
-        });
-        document.body.appendChild(theDiv);
-        document.querySelector('.m-dialog__close').addEventListener('click', function () {
-            closeModal(this);
-        });
-        document.querySelector('.m-dialog__OK').addEventListener('click', function () {
-            closeModal(this);
-        });
-    };
+function closeModal(target) {
+    target.removeEventListener();
+    document.body.removeChild(document.getElementById('modal'));
+    localStorage.clear();
+}
 
-    GoItTest.prototype.getResults = function () {
-        var livrare = [], t, el = document.forms[0].elements;
-        var result = {};
-
-
-        for (var i = 0; i < el.length - 1; i++) {
-            t = el[i].name.match(/question\[([0-9])\]\[answer([0-9])\]/);
-            result[t[1]] = result[t[1]] || [];
-            if (el[i].checked) {
-                result[t[1]].push(el[i].value);
-            }
-        }
-        for (var key in result) {
-            if (result.hasOwnProperty(key)) {
-                var answer = getAnswer(key, this.test.questions);
-                livrare.push(result[key].toString() === answer.toString());
-            }
-        }
-
-        return livrare.every(function (element) {
-            return element;
-        })
-    };
-
-    function closeModal(t) {
-        t.removeEventListener();
-        document.body.removeChild(document.getElementById('modal'));
-        localStorage.clear();
-    }
-
-    return GoItTest;
-})();
 
 document.addEventListener('DOMContentLoaded', function () {
-    var test, GoApp;
-    test = {
+    data = {
         questions: [
             {
                 id: 1,
@@ -87,10 +46,27 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         ]
     };
-    GoApp = new GoItTest(test, 'idFormBody');
+    GoApp = new GoItTest(localStorage);
+    GoApp.init(data);
+    GoApp.innerHTML('idFormBody', function (id, data) {
+        document.getElementById(id).innerHTML = tmpl('tQuestion', data);
+    });
 
     document.querySelector('#checkMyResults').addEventListener('click', function (event) {
         event.preventDefault();
-        GoApp.showModal(GoApp.getResults());
+
+        var elements =[];
+
+        for (var i = 0; i < document.forms[0].elements.length; i++) {
+            elements.push({
+                name: document.forms[0].elements[i].name,
+                checked: document.forms[0].elements[i].checked,
+                value: document.forms[0].elements[i].value
+            }
+            );
+        }
+
+        var result = GoApp.checkResults(elements);
+        showModal('Result', result ? 'Вы сдали!' : 'Вы не сдали!');
     });
 });
