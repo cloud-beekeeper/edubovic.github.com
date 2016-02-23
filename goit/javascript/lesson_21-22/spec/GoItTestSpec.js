@@ -33,8 +33,7 @@ Object.defineProperty(me, 'localStorage', { value: mockLocalStorage });
 Object.defineProperty(me, 'document', { value: mockDocument });
 
 
-//var GoItTest = require('../public/build/js/GoItTest.js'),
-var GoItTest = require('../public/js/GoItTest.js'),
+var GoItTest = require('../public/build/js/GoItTest.js'),
     data, GoApp, elementsFalse, elementsTrue;
 data = {
     questions: [
@@ -58,8 +57,8 @@ data = {
         }
     ]
 };
-elementsTrue = [{"name":"question[1][answer0]","checked":true,"value":"0"},{"name":"question[1][answer0]","checked":false,"value":"1"},{"name":"question[1][answer0]","checked":false,"value":"2"},{"name":"question[2][answer1]","checked":true,"value":"0"},{"name":"question[2][answer1]","checked":false,"value":"1"},{"name":"question[2][answer1]","checked":true,"value":"2"},{"name":"question[3][answer2]","checked":false,"value":"0"},{"name":"question[3][answer2]","checked":false,"value":"1"},{"name":"question[3][answer2]","checked":true,"value":"2"},{"name":"","checked":false,"value":"Проверить мои результаты"}];
-elementsFalse = [{"name":"question[1][answer0]","checked":true,"value":"0"},{"name":"question[1][answer0]","checked":false,"value":"1"},{"name":"question[1][answer0]","checked":false,"value":"2"},{"name":"question[2][answer1]","checked":true,"value":"0"},{"name":"question[2][answer1]","checked":false,"value":"1"},{"name":"question[2][answer1]","checked":true,"value":"2"},{"name":"question[3][answer2]","checked":false,"value":"0"},{"name":"question[3][answer2]","checked":true,"value":"1"},{"name":"question[3][answer2]","checked":false,"value":"2"},{"name":"","checked":false,"value":"Проверить мои результаты"}];
+elementsTrue = [{"name":"question[1][answer0]","checked":true,"value":"0"},{"name":"question[1][answer0]","checked":false,"value":"1"},{"name":"question[1][answer0]","checked":false,"value":"2"},{"name":"question[2][answer1]","checked":true,"value":"0"},{"name":"question[2][answer1]","checked":false,"value":"1"},{"name":"question[2][answer1]","checked":true,"value":"2"},{"name":"question[3][answer2]","checked":false,"value":"0"},{"name":"question[3][answer2]","checked":false,"value":"1"},{"name":"question[3][answer2]","checked":true,"value":"2"}];
+elementsFalse = [{"name":"question[1][answer0]","checked":true,"value":"0"},{"name":"question[1][answer0]","checked":false,"value":"1"},{"name":"question[1][answer0]","checked":false,"value":"2"},{"name":"question[2][answer1]","checked":true,"value":"0"},{"name":"question[2][answer1]","checked":false,"value":"1"},{"name":"question[2][answer1]","checked":true,"value":"2"},{"name":"question[3][answer2]","checked":false,"value":"0"},{"name":"question[3][answer2]","checked":true,"value":"1"},{"name":"question[3][answer2]","checked":false,"value":"2"}];
 
 GoApp = new GoItTest(me.localStorage);
 GoApp.init(data);

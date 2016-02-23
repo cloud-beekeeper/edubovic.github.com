@@ -38,8 +38,35 @@
     display: none;
 }
 
+
+.sub-menu {
+    background-color: rgb(225,75,75);
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 200px;
+}
+
+.sub-menu li {
+    position: relative;
+    margin: 0;
+    display: block;
+}
+
+.sub-menu li a {
+    border-bottom: solid 1px rgb(200,50,50);
+    margin: 0 10px;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    line-height: 40px;
+}
+
+
 .clearfix:after {
     content:'';
     clear: both;
     display: block;
 }
+

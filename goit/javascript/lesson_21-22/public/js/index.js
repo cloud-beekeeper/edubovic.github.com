@@ -1,4 +1,4 @@
-var data, GoApp;
+let data, GoApp;
 
 function showModal(title, body) {
     var theDiv = document.createElement('div');
@@ -8,10 +8,10 @@ function showModal(title, body) {
         body: body
     });
     document.body.appendChild(theDiv);
-    document.querySelector('.m-dialog__close').addEventListener('click', function (e) {
+    document.querySelector('.m-dialog__close').addEventListener('click', (e) => {
         closeModal(e.target);
     });
-    document.querySelector('.m-dialog__OK').addEventListener('click', function (e) {
+    document.querySelector('.m-dialog__OK').addEventListener('click', (e) => {
         closeModal(e.target);
     });
 }
@@ -23,7 +23,7 @@ function closeModal(target) {
 }
 
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     data = {
         questions: [
             {
@@ -48,25 +48,23 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     GoApp = new GoItTest(localStorage);
     GoApp.init(data);
-    GoApp.innerHTML('idFormBody', function (id, data) {
+    GoApp.innerHTML('idFormBody', (id, data) => {
         document.getElementById(id).innerHTML = tmpl('tQuestion', data);
     });
 
-    document.querySelector('#checkMyResults').addEventListener('click', function (event) {
+    document.querySelector('#checkMyResults').addEventListener('click', (event) => {
         event.preventDefault();
-
-        var elements =[];
-
-        for (var i = 0; i < document.forms[0].elements.length; i++) {
-            elements.push({
-                name: document.forms[0].elements[i].name,
-                checked: document.forms[0].elements[i].checked,
-                value: document.forms[0].elements[i].value
+        let formsElements = document.forms[0].elements,
+            elements = [];
+        for (let i = 0; i < formsElements.length; i++) {
+            if (formsElements[i].type === 'radio' || formsElements[i].type === 'checkbox') {
+                elements.push({
+                    name: formsElements[i].name,
+                    checked: formsElements[i].checked,
+                    value: formsElements[i].value
+                });
             }
-            );
         }
-
-        var result = GoApp.checkResults(elements);
-        showModal('Result', result ? 'Вы сдали!' : 'Вы не сдали!');
+        showModal('Result', GoApp.checkResults(elements) ? 'Вы сдали!' : 'Вы не сдали!');
     });
 });

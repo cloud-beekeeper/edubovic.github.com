@@ -3,7 +3,7 @@
 $widthItemService: 260px;
 
 .service {
-    padding: 50px 0 70px 0;
+    padding: 45px 0 65px 0;
 
     .service__title {
         font-size: 24px;
@@ -38,7 +38,7 @@ $widthItemService: 260px;
                 position: absolute;
                 top: 0;
                 left: 0;
-                background: rgba(36, 140, 236, 0.9) url("/img/ico/plus.png") no-repeat scroll 50% 50%;
+                background: rgba(36, 140, 236, 0.9) url("../images/ico/plus.png") no-repeat scroll 50% 50%;
                 height: $widthItemService;
                 width: $widthItemService;
                 display: none;

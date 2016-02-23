@@ -6,7 +6,6 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        padding-bottom: 5px;
 
         .accordion__title {
             width: 100%;
@@ -18,7 +17,7 @@
             text-decoration: none;
             padding-left: 40px;
             border: 1px solid #e8e8e8;
-            background: #fff url("/img/ico/plus-negru.png") no-repeat scroll 15px 50%;
+            background: #fff url("../images/ico/plus-negru.png") no-repeat scroll 15px 50%;
             box-sizing: border-box;
 
             span {
@@ -31,7 +30,7 @@
         .accordion__title_active {
             border-color: #f4b60d;
             color: #fff;
-            background: #f4b60d url("/img/ico/minus-alb.png") no-repeat scroll 15px 50%;
+            background: #f4b60d url("../images/ico/minus-alb.png") no-repeat scroll 15px 50%;
 
             span {
                 border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -40,7 +39,7 @@
 
         .accordion__content {
             display: none;
-            padding: 30px 0 38px 38px;
+            padding: 10px 0 0px 38px;
             color: #8a8a8a;
         }
     }

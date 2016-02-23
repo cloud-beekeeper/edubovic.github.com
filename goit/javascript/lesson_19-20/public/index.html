@@ -4,36 +4,73 @@
     <meta charset="UTF-8">
     <title>Lesson 19-20</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/flexslider.css">
     <link rel="stylesheet" href="./build/css/all.css">
     <script src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/lodash/4.3.0/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/jquery.flexslider-min.js"></script>
     <script src="./js/accordion.js"></script>
+    <script src="./js/slider.js"></script>
 </head>
     <body>
         <div class="body">
-            <div class="center">
-                <div class="logo">
-                    <a class="logo__a" href="#" title="logo"></a>
-                </div>
-                <!--<div class="menu">
-                    <nav class="menu">
-                        <ul class="menu__ul">
-                            <li class="menu__li menu__li_active"><a class="menu__a" href="#" title="Home">Home</a></li>
-                            <li class="menu__li"><a class="menu__a" href="#" title="Features">Features</a></li>
-                            <li class="menu__li"><a class="menu__a" href="#" title="Services">Services</a></li>
-                            <li class="menu__li"><a class="menu__a" href="#" title="News">News</a></li>
-                            <li class="menu__li"><a class="menu__a" href="#" title="Shop">Shop</a></li>
-                        </ul>
-                    </nav>
+            <header class="header">
+                <div class="center">
+                    <div class="clearfix">
+                        <div class="logo">
+                            <a class="logo__a" href="#" title="logo"></a>
+                        </div>
 
-                    <div class="search">
+                        <div class="social">
+                            <a class="social__facebook" href="#" title="facebook"></a>
+                            <a class="social__twitter" href="#" title="twitter"></a>
+                            <a class="social__rss" href="#" title="rss"></a>
+                            <a class="social__linkedin" href="#" title="linkedin"></a>
+                            <a class="social__skype" href="#" title="skype"></a>
+
+                        </div>
+                    </div>
+                    <div class="menu-bar clearfix">
+                        <nav class="menu menu_left">
+                            <ul class="menu__ul clearfix">
+                                <li class="menu__li menu__li_active"><a class="menu__a" href="#" title="Home">Home</a></li>
+                                <li class="menu__li"><a class="menu__a" href="#" title="Features">Features</a></li>
+                                <li class="menu__li"><a class="menu__a" href="#" title="Services">Services</a></li>
+                                <li class="menu__li"><a class="menu__a" href="#" title="News">News</a></li>
+                                <li class="menu__li"><a class="menu__a" href="#" title="Shop">Shop</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="search search_right">
+                            <form class="search__form" action="">
+                                <input type="text" class="search__q">
+                                <button class="search__submit" type="submit"></button>
+                            </form>
+                        </div>
 
                     </div>
+                </div>
+            </header>
 
-                </div>-->
+
+            <div class="slider center">
+                <div class="flexslider">
+                    <ul class="slider__ul slides">
+                        <li class="slider__li">
+                            <img class="slider__img" src="./img/slider/1.png">
+                        </li>
+                        <li class="slider__li">
+                            <img class="slider__img" src="./img/slider/2.png">
+                        </li>
+                        <li class="slider__li">
+                            <img class="slider__img" src="./img/slider/1.png">
+                        </li>
+                        <li class="slider__li">
+                            <img class="slider__img" src="./img/slider/2.png">
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-
 
 
 

@@ -1,3 +1,4 @@
+@import "variables";
 
 .menu {
     .menu__ul {
@@ -10,8 +11,8 @@
         padding: 0;
         float: left;
         display: block;
-        height: 56px;
-        line-height: 56px;
+        height: $menuBarHeight;
+        line-height: $menuBarHeight;
         width: 115px;
         text-align: center;
     }
@@ -32,6 +33,8 @@
     .menu__a:hover {
         color: #f4b60d;
     }
+
+    &.menu_left {
+        float: left;
+    }
 }
-
-

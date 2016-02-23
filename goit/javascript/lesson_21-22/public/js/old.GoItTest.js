@@ -38,8 +38,7 @@ var GoItTest = (function () {
         }
         for (var key in result) {
             if (result.hasOwnProperty(key)) {
-                var answer = getAnswer.call(this, key);
-                livrare.push(result[key].toString() === answer.toString());
+                livrare.push(result[key].toString() === getAnswer.call(this, key).toString());
             }
         }
 

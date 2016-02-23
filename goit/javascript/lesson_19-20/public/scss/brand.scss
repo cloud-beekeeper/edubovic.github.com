@@ -1,14 +1,18 @@
 .brand {
     text-align: center;
-    padding: 100px 0;
-}
+    padding: 85px 0;
 
-.brand__a {
-    display: inline-block;
-    text-align: center;
-}
+    .brand__a {
+        display: inline-block;
+        text-align: center;
+        margin-right: 45px;
 
-.brand__img {
-    display: block;
-}
+        &:last-child {
+            margin: 0;
+        }
+    }
 
+    .brand__img {
+        display: block;
+    }
+}

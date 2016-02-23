@@ -1,24 +1,34 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    watch = require('gulp-watch');
+    del = require('del'),
+    minifyCss = require('gulp-minify-css');
 
-gulp.task('concat', function() {
-    return gulp.src('./js/**/*.js')
-        .pipe(concat('all.gulp.js'))
-        .pipe(gulp.dest('./build/'));
-});
-
-gulp.task('uglify', function() {
-    return gulp.src('./build/all.gulp.js')
+gulp.task('js', function () {
+    return gulp.src('./public/js/**/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./build'));
+        .pipe(concat('all.gulp.js'))
+        .pipe(gulp.dest('./build/js'))
+
 });
 
-gulp.task('watch', function() {
-    gulp.watch('./js/**/*.js', function(event) {
-        gulp.run(['concat', 'uglify']);
-    });
+gulp.task('css', function () {
+    return gulp.src('./public/css/**/*.css')
+        .pipe(minifyCss())
+        .pipe(concat('all.gulp.css'))
+        .pipe(gulp.dest('./build/css'));
+});
+
+gulp.task('clean:dist', function() {
+    return del.sync('./build');
+});
+
+gulp.task('watch', ['build'], function (){
+    gulp.watch('./public/css/**/*.css', ['css']);
+    gulp.watch('./public/js/**/*.js', ['js']);
 });
 
 
+gulp.task('build', ['clean:dist', 'css', 'js'], function () {
+    console.log('Building files');
+});

@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     del = require('del');
 
-gulp.task('server', ['sass', 'images'], function () {
+gulp.task('server', ['sass'], function () {
     browserSync.init({
         server: "./public"
     });
@@ -17,7 +17,7 @@ gulp.task('server', ['sass', 'images'], function () {
 gulp.task('images', function () {
     return gulp
         .src('./public/img/**/*.*')
-        .pipe(gulp.dest('./public/build'))
+        .pipe(gulp.dest('./public/build/images'))
     ;
 
 });
@@ -37,4 +37,4 @@ gulp.task('clean', function () {
     return del('./public/build');
 });
 
-gulp.task('default', ['clean', 'sass', 'server']);
+gulp.task('default', ['server']);

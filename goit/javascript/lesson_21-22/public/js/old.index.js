@@ -57,8 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var formsElements = document.forms[0].elements,
             elements = [];
-
-
         for (var i = 0; i < formsElements.length; i++) {
             if (formsElements[i].type === 'radio' || formsElements[i].type === 'checkbox') {
                 elements.push({
@@ -68,9 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
         }
-        console.log(elements);
-
-        var result = GoApp.checkResults(elements);
-        showModal('Result', result ? 'Вы сдали!' : 'Вы не сдали!');
+        showModal('Result', GoApp.checkResults(elements) ? 'Вы сдали!' : 'Вы не сдали!');
     });
 });
