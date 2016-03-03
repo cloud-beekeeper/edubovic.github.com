@@ -30,17 +30,17 @@ define('todo/model', [],  function () {
              */
             Model.prototype.getData = function (record, callback) {
                 (typeof record.id === 'number')
-                    ? this.storage.findById(record.index, callback)
+                    ? this.storage.findById(record.id, callback)
                     : this.storage.findAll(callback);
             };
 
             /**
              *
-             * @param {number}      index
+             * @param {number}      id
              * @param {function}    callback
              */
-            Model.prototype.remove = function (index, callback) {
-                this.storage.remove(index, callback);
+            Model.prototype.remove = function (id, callback) {
+                this.storage.remove(id, callback);
             };
 
             /**

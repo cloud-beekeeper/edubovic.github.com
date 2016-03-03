@@ -39,34 +39,22 @@ define('todo/store', [],  function () {
              * @param {function}    callback
              */
             Store.prototype.save = function (record, callback) {
-                var response = {}, data = JSON.parse(localStorage[this._dbName]);
+                var data = JSON.parse(localStorage[this._dbName]);
                 if (record.id === undefined) {
-                    response.newRecord = true;
-                    response.id = new Date().getTime();
-                    data.taskList.push({
-                        id: response.id,
-                        title: record.title
-                    });
+                    record.id = new Date().getTime();
+                    data.taskList.push(record);
                 } else {
-                    response.newRecord = false;
-                    //data.taskList[record.id] = record.title;
-                    //response.id = record.id;
-                    console.log('dddddddddddddddddddddddddddddddddddddddd',response);
-                    var res = data.taskList.every(function (element, index, array) {
-                        if (element === record.id) {
-
+                    data.taskList.every(function (element, index, array) {
+                        if (element.id === +record.id) {
+                            data.taskList[index].title = record.title;
+                            //r = data.taskList[index];
                             return false;
                         }
-
                         return true;
                     });
-                    console.log('res', res);
                 }
-                response.title = record.title;
-
-                console.log('response',response);
                 localStorage[this._dbName] = JSON.stringify(data);
-                callback(response);
+                callback(record);
             };
 
             /**
@@ -84,10 +72,15 @@ define('todo/store', [],  function () {
              * @param {function}    callback
              */
             Store.prototype.findById  = function (id, callback) {
-                callback({
-                    id: id,
-                    title: JSON.parse(localStorage[this._dbName]).taskList[id]
+                var record = {};
+                JSON.parse(localStorage[this._dbName]).taskList.every(function (element, index, array) {
+                    if (element.id === id) {
+                        record = element;
+                        return false;
+                    }
+                    return true;
                 });
+                callback(record);
             };
 
             /**
@@ -97,13 +90,17 @@ define('todo/store', [],  function () {
              * @param {function}    callback
              */
             Store.prototype.remove = function (id, callback) {
-                var removeData, data = JSON.parse(localStorage[this._dbName]);
-                removeData = data.taskList.splice(id, 1);
-                localStorage[this._dbName] = JSON.stringify(data);
-                callback({
-                    id: id,
-                    title: removeData
+                var record = {},
+                    data = JSON.parse(localStorage[this._dbName]);
+                data.taskList.every(function (element, index, array) {
+                    if (element.id === id) {
+                        record = data.taskList.splice(index, 1);
+                        return false;
+                    }
+                    return true;
                 });
+                localStorage[this._dbName] = JSON.stringify(data);
+                callback(record[0]);
             };
 
             /**

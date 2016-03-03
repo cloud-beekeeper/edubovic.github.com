@@ -18,15 +18,17 @@ define('todo/controller', [],  function () {
             this.model = model;
 
             this.view.bind('submit', function (record) {
-                (record.id === undefined) ? me.addItem(record) : me.editSave(record);
+                (record.id === undefined)
+                    ? me.addItem(record)
+                    : me.editSave(record);
             });
 
             this.view.bind('getIdRecord', function (id) {
                 me.getRecordById({ id: id });
             });
 
-            this.view.bind('editCancel', function () {
-                me.editCancel();
+            this.view.bind('editCancel', function (id) {
+                me.editCancel(id);
             });
 
             this.view.bind('remove', function (id) {
@@ -59,9 +61,9 @@ define('todo/controller', [],  function () {
             });
         };
 
-        Controller.prototype.editCancel = function () {
+        Controller.prototype.editCancel = function (id) {
             var me = this;
-            me.view.render('editCancel', {});
+            me.view.render('editCancel', { id: id });
         };
 
         /**
@@ -91,7 +93,6 @@ define('todo/controller', [],  function () {
         Controller.prototype.showAll = function () {
             var me = this;
             me.model.getData({ id: undefined }, function (r) {
-                console.log(r)
                 me.view.render('allTasks', r);
             });
         };
@@ -101,7 +102,6 @@ define('todo/controller', [],  function () {
          */
         Controller.prototype.getRecordById = function (record) {
             var me = this;
-            console.log('record',record);
             this.model.getData(record, function (r) {
                 me.view.render('edit', r);
             });

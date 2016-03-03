@@ -42,8 +42,6 @@ define('todo/template', [],  function () {
                 td.innerHTML = record.title + '<i class="t-edit-id t-list__ico t-list__ico_edit fa fa-pencil-square-o"></i><i class="t-remove-id t-list__ico t-list__ico_remove fa fa-trash-o"></i>';
                 tr.insertBefore(td, null);
 
-                console.log(record)
-
                 return tr;
             };
 

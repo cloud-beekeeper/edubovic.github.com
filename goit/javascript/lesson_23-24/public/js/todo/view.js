@@ -26,15 +26,16 @@ define('todo/view', ['helpers', 'todo/template'],  function (Helpers, Template) 
                 var me = this, listEvents;
                 listEvents = {
                     submit: function () {
-                        me.helper.on(me.submit, 'click', function () {
-                            var value = me.newTask.value.trim();
-                            me.newTask.value = '';
-                            me.newTask.focus();
+                        var callback = function () {
+                            var value = this.value;
+                            this.value = '';
                             handler({
-                                index: me.newTask.dataset.id,
-                                title: value
+                                id: this.dataset.id,
+                                title: value.trim()
                             });
-                        });
+                        };
+                        me.helper.on(me.submit, 'click', callback);
+                        me.helper.on(me.newTask, 'change', callback);
                     },
                     getIdRecord: function () {
                         me.helper.delegate(me.listTasks , '.t-edit-id', 'click', function () {
@@ -45,7 +46,7 @@ define('todo/view', ['helpers', 'todo/template'],  function (Helpers, Template) 
                     editCancel: function () {
                         me.helper.on(me.newTask, 'keyup', function (event) {
                             if (event.keyCode === 27) {
-                                handler();
+                                handler(me.newTask.dataset.id);
                             }
                         });
                     },
@@ -70,29 +71,39 @@ define('todo/view', ['helpers', 'todo/template'],  function (Helpers, Template) 
                 listEvents = {
                     newTask: function (r) {
                         me.listTasks.insertBefore(me.template.renderRecord(r), null);
+                        me.newTask.focus();
                     },
                     allTasks: function (r) {
                         me.listTasks.innerHTML = me.template.show(r);
                     },
                     edit: function (r) {
+                        var element;
                         me.newTask.value = r.title;
                         me.newTask.dataset.id = r.id;
                         me.submit.innerHTML = 'Save';
+                        element = me.helper.qs('[data-id="item-' + r.id + '"]');
+                        element.className = 'pure-table-odd';
                     },
-                    editCancel: function () {
+                    editCancel: function (r) {
+                        var element;
                         me.newTask.value = '';
-                        me.newTask.removeAttribute('data-index');
+                        if (r.id === undefined) {
+                            return false;
+                        }
+                        me.newTask.removeAttribute('data-id');
                         me.submit.innerHTML = 'Create';
+                        element = me.helper.qs('tr[data-id="item-' + r.id + '"]');
+                        element.className = '';
                     },
                     editSave: function (r) {
                         var tr = me.template.renderRecord(r),
-                            element = me.helper.qs('[data-index="item-' + r.id + '"]');
+                            element = me.helper.qs('[data-id="item-' + r.id + '"]');
                         me.listTasks.replaceChild(tr, element);
-                        me.newTask.removeAttribute('data-index');
+                        me.newTask.removeAttribute('data-id');
                         me.submit.innerHTML = 'Create';
                     },
                     remove: function (r) {
-                        var element = me.helper.qs('[data-index="item-' + r.id + '"]');
+                        var element = me.helper.qs('[data-id="item-' + r.id + '"]');
                         me.listTasks.removeChild(element);
                     },
                     removeAll: function () {
