@@ -18,9 +18,16 @@ gulp.task('images', function () {
     return gulp
         .src('./public/img/**/*.*')
         .pipe(gulp.dest('./public/build/images'))
-    ;
-
+        ;
 });
+
+gulp.task('fonts', function () {
+    return gulp
+        .src('./public/font/**/*.*')
+        .pipe(gulp.dest('./public/build/font'))
+        ;
+});
+
 
 gulp.task('sass', function () {
     return gulp

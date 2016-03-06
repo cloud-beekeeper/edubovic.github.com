@@ -4,3 +4,8 @@ node_modules
 test
 tests
 build
+
+
+!goit/javascript/lesson_19-20/public/build
+!goit/javascript/lesson_21-22/public/build
+

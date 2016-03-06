@@ -1,5 +1,40 @@
 @import "variables";
 
+@font-face {
+    font-family: 'ubuntumedium';
+    src: url('../font/ubuntu/ubuntu-m.eot');
+    src: url('../font/ubuntu/ubuntu-m.eot?#iefix') format('embedded-opentype'),
+    url('../font/ubuntu/ubuntu-m.woff2') format('woff2'),
+    url('../font/ubuntu/ubuntu-m.woff') format('woff'),
+    url('../font/ubuntu/ubuntu-m.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ubuntulight';
+    src: url('../font/ubuntu/ubuntu-l.eot');
+    src: url('../font/ubuntu/ubuntu-l.eot?#iefix') format('embedded-opentype'),
+    url('../font/ubuntu/ubuntu-l.woff2') format('woff2'),
+    url('../font/ubuntu/ubuntu-l.woff') format('woff'),
+    url('../font/ubuntu/ubuntu-l.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu_condensedregular';
+    src: url('ubuntu-c.eot');
+    src: url('ubuntu-c.eot?#iefix') format('embedded-opentype'),
+    url('ubuntu-c.woff2') format('woff2'),
+    url('ubuntu-c.woff') format('woff'),
+    url('ubuntu-c.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 ul {
     list-style-type: none;

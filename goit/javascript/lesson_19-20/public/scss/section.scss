@@ -1,0 +1,70 @@
+
+.section {
+    padding: 120px 0 80px 120px;
+    width: 22%;
+    position: relative;
+    display: inline-block;
+    background: no-repeat 123px 72px;
+
+    .section__h3 {
+        margin: 0;
+        color: #2a2b2e;
+        font-size: 20px;
+        font-family: ubuntumedium;
+    }
+
+    .section__content {
+        color: #8a8a8a;
+        font-size: 13px;
+        padding: 17px 0;
+        margin: 0;
+        line-height: 20px;
+    }
+
+    .section__r-more {
+        color: #2a2b2e;
+        font-size: 13px;
+        text-decoration: none;
+        display: inline-block;
+        font-family: ubuntumedium;
+        background: transparent url("../images/ico/pointer.png") no-repeat scroll 100% 50%;
+        padding-right: 20px;
+
+        &:hover {
+            color: #248cec;
+        }
+    }
+
+    &:before {
+        font-size: 90px;
+        color: rgba(42, 43, 43, 0.1);
+        position: absolute;
+        top: 48px;
+        left: 0;
+        font-family: ubuntumedium;
+    }
+
+    &.section_setting {
+        background-image: url("../images/ico/settings.png");
+
+        &:before {
+            content: "01";
+        }
+    }
+
+    &.section_param {
+        background-image: url("../images/ico/params.png");
+
+        &:before {
+            content: "02";
+        }
+    }
+
+    &.section_truck {
+        background-image: url("../images/ico/truck.png");
+
+        &:before {
+            content: "03";
+        }
+    }
+}
